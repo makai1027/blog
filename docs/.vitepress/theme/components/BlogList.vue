@@ -2,6 +2,7 @@
 import { useData, useRouter } from 'vitepress'
 import { useBrowserLocation } from '@vueuse/core'
 import { computed, watch } from 'vue'
+import { ElPagination } from 'element-plus'
 import type { Theme } from '../composables/config'
 import {
   useActiveTag,
@@ -110,7 +111,7 @@ watch(
   </ul>
   <!-- 隐藏不友好ssr -->
   <ClientOnly>
-    <el-pagination
+    <ElPagination
       v-if="wikiList.length >= pageSize"
       small
       background

@@ -1,8 +1,5 @@
 import { defineConfig } from 'vitepress'
 import Unocss from 'unocss/vite'
-import AutoImport from 'unplugin-auto-import/vite'
-import Components from 'unplugin-vue-components/vite'
-import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import { presetAttributify, presetIcons, presetUno } from 'unocss'
 import { getAllFiles } from './theme/node'
 import type { Theme } from './theme/composables/config/index'
@@ -38,18 +35,12 @@ export default defineConfig({
     },
     search: {
       provider: 'local',
-      options: {
-        appId: 'F919JCK8WY',
-        apiKey: '3eca209ad24bdfc26db63382dd5e4490',
-        indexName: 'sugarat_top',
-        placeholder: '请输入要搜索的内容...',
-      },
     },
     lastUpdatedText: '上次更新于',
     footer: {
       message:
-        '<a target="_blank" href="https://beian.miit.gov.cn/">蜀ICP备19011724号</a>',
-      copyright: '© 2018-present 粥里有勺糖 |  </a>',
+      '<a target="_blank" href="https://beian.miit.gov.cn/">皖ICP备16024556号-3</a>',
+      copyright: '© 2018-present | <a href="http://www.soulferry.xyz">遇见前端。 </a>',
     },
     logo: '/logo.jpg',
     editLink: {
@@ -60,7 +51,7 @@ export default defineConfig({
     nav: [
       {
         text: '关于我',
-        link: '/aboutme',
+        link: '/about',
       },
       {
         text: '前端',
@@ -96,30 +87,6 @@ export default defineConfig({
           }),
           presetAttributify(),
         ],
-      }),
-      AutoImport({
-        // 自动导入 Element Plus 相关函数，如：ElMessage, ElMessageBox... (带样式)
-        resolvers: [
-          ElementPlusResolver({
-            importStyle: 'sass',
-          }),
-        ],
-        // 自动导入 Vue 相关函数，如：ref, reactive, toRef 等
-        imports: ['vue', '@vueuse/core', 'vitepress'],
-        dts: 'types/auto-imports.d.ts',
-      }),
-      Components({
-        deep: true,
-        resolvers: [
-          // Auto register Element Plus components
-          // 自动导入 Element Plus 组件
-          ElementPlusResolver({
-            importStyle: 'sass',
-          }),
-        ],
-        dts: 'types/components.d.ts',
-        extensions: ['vue'],
-        dirs: ['src/components'],
       }),
     ],
   },

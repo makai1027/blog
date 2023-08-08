@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
+import { ElAvatar, ElButton, ElDivider } from 'element-plus'
 import { isCurrentWeek } from '../utils'
 import { useArticles } from '../composables/config/blog'
 
@@ -31,14 +32,18 @@ function openGithub() {
 <template>
   <div class="card box-border position-relative mx-auto mb-10px w-full overflow-hidden p-10px rounded">
     <div class="text-center mb-10px">
-      <el-avatar src="https://avatars.githubusercontent.com/u/24761813?v=4" alt="作者头像" :size="80" shape="circle" />
+      <ElAvatar src="https://avatars.githubusercontent.com/u/24761813?v=4" alt="作者头像" :size="80" shape="circle" />
 
       <p class="text-sm mb-2">
         前端笔记，用于记录相关经验。
       </p>
-      <p class="text-sm">
-        <span class="i-line-md:email" />
+      <p class="text-sm mb-2">
+        <span class="i-line-md:email primary" />
         <a class="ml-2" href="mailto:403756835@qq.com">403756835@qq.com</a>
+      </p>
+      <p class="text-sm">
+        <span class="i-ic:round-wechat success" />
+        <span class="ml-2">atob('U3ltYm9sOTFt')</span>
       </p>
     </div>
     <div class="w-full flex items-center ">
@@ -46,23 +51,23 @@ function openGithub() {
         <span class="text-lg">{{ notHiddenArticles.length }}</span>
         <span class="text-xs mt-6px label">博客文章</span>
       </div>
-      <el-divider direction="vertical" />
+      <ElDivider direction="vertical" />
       <div class="flex flex-1 items-center flex-col justify-center mx-10px">
         <span class="text-lg">+{{ currentMonth?.length }}</span>
         <span class="text-xs mt-6px label">本月更新</span>
       </div>
-      <el-divider direction="vertical" />
+      <ElDivider direction="vertical" />
       <div class="flex flex-1 items-center flex-col justify-center mx-10px">
         <span class="text-lg">+{{ currentWeek?.length }}</span>
         <span class="text-xs mt-6px label">本周更新</span>
       </div>
     </div>
-    <el-button size="small" type="primary" class="w-full mt-2" @click="openGithub">
+    <ElButton size="small" type="primary" class="w-full mt-2" @click="openGithub">
       <template #icon>
         <span class="i-formkit:github" />
       </template>
       Follow me
-    </el-button>
+    </ElButton>
   </div>
 </template>
 
@@ -76,7 +81,12 @@ function openGithub() {
     box-shadow: var(--box-shadow-hover);
   }
 }
-
+.primary {
+  color: var(--el-color-primary);
+}
+.success {
+  color: var(--el-color-success);
+}
 .label {
   color: var(--description-font-color);
 }

@@ -8,7 +8,7 @@ export default defineConfig({
   ignoreDeadLinks: true,
   title: '遇见前端',
   description: '一个前端的学习笔记',
-  lang: 'zh-cn',
+  lang: 'zh-CN',
   head: [
     ['meta', { name: 'theme-color', content: '#ffffff' }],
     ['link', { rel: 'icon', href: '/favicon.ico', type: 'image/png' }],
@@ -21,7 +21,9 @@ export default defineConfig({
         sizes: '16x16',
       },
     ],
-    ['meta', { name: 'author', content: '粥里有勺糖' }],
+    ['meta', { name: 'author', content: '遇见前端' }],
+    ['meta', { name: 'keywords', content: 'Js,ts,JavaScript,Typescript,vitepress,node,前端,分享,博客,技术经验' }],
+    ['meta', { name: 'description', content: '遇见前端一个写博客的仓库，仓库包含面试遇到的问题，项目总结，技术难点记录，知识点记录' }],
     ['link', { rel: 'mask-icon', href: '/favicon.ico', color: '#ffffff' }],
     [
       'link',
@@ -30,6 +32,9 @@ export default defineConfig({
   ],
   lastUpdated: true,
   themeConfig: {
+    outlineTitle: '本页目录',
+    sidebarMenuLabel: '菜单',
+    returnToTopLabel: '返回页面顶部',
     blog: {
       pagesData: getAllFiles() as Theme.PageData[],
     },
@@ -45,9 +50,13 @@ export default defineConfig({
     logo: '/logo.jpg',
     editLink: {
       pattern:
-        'https://github.com/ATQQ/sugar-blog/tree/master/packages/blogpress/:path',
+        'https://github.com/makai1027/blog/tree/main/docs/:path',
       text: '去 GitHub 上编辑内容',
     },
+    sidebar: [{
+      text: '',
+      items: [],
+    }],
     nav: [
       {
         text: '关于我',
@@ -60,12 +69,8 @@ export default defineConfig({
         ],
       },
       {
-        text: '测试',
-        items: [
-          { text: '心得总结', link: '/api-examples' },
-          { text: '校招考点汇总', link: '/index' },
-          { text: '面经汇总', link: '/markdown-examples' },
-        ],
+        text: '技术随笔',
+        link: '/other/index',
       },
     ],
     socialLinks: [

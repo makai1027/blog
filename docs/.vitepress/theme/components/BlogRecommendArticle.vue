@@ -78,7 +78,7 @@ const showChangeBtn = computed(() => {
 <template>
   <div
     v-if="_recommend !== false && (recommendList.length || emptyText)"
-    class="card recommend"
+    class="recommend"
     data-pagefind-ignore="all"
   >
     <!-- 头部 -->
@@ -127,24 +127,6 @@ const showChangeBtn = computed(() => {
 </template>
 
 <style lang="scss" scoped>
-.card {
-  position: relative;
-  margin: 0 auto 10px;
-  padding: 10px;
-  width: 100%;
-  overflow: hidden;
-  border-radius: 0.25rem;
-  box-shadow: var(--box-shadow);
-  box-sizing: border-box;
-  transition: all 0.3s;
-  background-color: rgba(var(--bg-gradient));
-  display: flex;
-
-  &:hover {
-    box-shadow: var(--box-shadow-hover);
-  }
-}
-
 .recommend {
   flex-direction: column;
   padding: 16px 10px;

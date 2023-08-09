@@ -14,6 +14,7 @@ group:
 
 ## 目录
 * [apply,call,bind 的异同](./apply.md)
+* [JS中基本数据类型以及它们的区别](./baseData.md)
 * [箭头函数?](./arrowfun.md)
 * [blob与file](./blob.md)
 * [定时器](./clock.md)

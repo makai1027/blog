@@ -80,17 +80,8 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="custom-wrapper">
+  <div class="position-fixed left-0 top-0 w-full h-full z-10">
     <canvas ref="cvsRef" style="width: 100%;height: 100%;" />
     <slot />
   </div>
 </template>
-
-<style lang='scss' scoped>
-    .custom-wrapper {
-        position: relative;
-        height: 100vh;
-        width: 100vw;
-        overflow: hidden;
-    }
-</style>

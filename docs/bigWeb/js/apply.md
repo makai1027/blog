@@ -7,7 +7,7 @@ title: apply,call,bind的异同
 date: 2020-04-14
 tags:
  - 大前端
- - javascript
+ - JavaScript
 categories:
  - 大前端
 ---
@@ -19,23 +19,24 @@ categories:
 MDN:bind() 方法会创建一个新函数。当这个新函数被调用时，bind() 的第一个参数将作为它运行时的 this，之后的一序列参数将会在传递的实参前传入作为它的参数
 :::
 
-```js
-const obj = {
+```ts
+const target = {
   a: 1,
   b: 2,
-  test() {
-    console.log(this.a + this.b)
+  test(...args) {
+    console.log(this.a + this.b, ...args)
   }
 }
 
-obj.test() // 3
-obj.test.apply({ a: 2, b: 2 }) // 4
-obj.test.call({ a: 3, b: 3 }) // 6
-obj.test.bind({ a: 4, b: 4 })() // 8
+target.test() // 3
+target.test.apply({ a: 2, b: 2 }, ['hello', 'world']) // 4, 'hello', 'world'
+target.test.call({ a: 3, b: 3 }, 'hello', 'world') // 6, 'hello', 'world'
+target.test.bind({ a: 4, b: 4 }, 'haha')('hello', 'world') // 8, 'haha' 'hello', 'world'
 ```
-## 不同点
-传参方式不一样
-* bind(this,...argv)
+## bind/call/apply不同点
+
+**传参方式不一样**
+* bind(this,...argv), bind在声明和执行时都可以传入其他参数，bind会返回一个新的函数
 * call(this,...argv)
 * apply(this,[...argv])
 

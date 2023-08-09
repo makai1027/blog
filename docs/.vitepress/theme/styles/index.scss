@@ -24,7 +24,7 @@ html[class='dark'] {
   min-height: calc(100vh - var(--vp-nav-height));
   background: radial-gradient(
     ellipse,
-    rgba(var(--bg-gradient-home), 0.5) 0%,
+    rgba(var(--bg-gradient-home), 0.7) 0%,
     rgba(var(--bg-gradient-home), 0) 700%
   );
 }

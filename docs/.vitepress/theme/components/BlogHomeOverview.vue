@@ -3,6 +3,7 @@ import { computed } from 'vue'
 import { ElAvatar, ElButton, ElDivider } from 'element-plus'
 import { isCurrentWeek } from '../utils'
 import { useArticles } from '../composables/config/blog'
+import avatarImg from '../../../assets/avatar.jpeg'
 
 const docs = useArticles()
 const notHiddenArticles = computed(() => {
@@ -32,7 +33,7 @@ function openGithub() {
 <template>
   <div class="card box-border position-relative mx-auto mb-10px w-full overflow-hidden p-10px rounded">
     <div class="text-center mb-10px">
-      <ElAvatar src="https://avatars.githubusercontent.com/u/24761813?v=4" alt="作者头像" :size="80" shape="circle" />
+      <ElAvatar :src="avatarImg" alt="作者头像" :size="80" shape="circle" />
 
       <p class="text-sm mb-2">
         前端笔记，用于记录相关经验。

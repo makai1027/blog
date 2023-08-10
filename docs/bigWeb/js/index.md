@@ -15,6 +15,8 @@ group:
 ## 目录
 * [apply,call,bind 的异同](./apply.md)
 * [JS中基本数据类型以及它们的区别](./baseData.md)
+* [JS == 和 === 的区别以及条件判断引发的数据类型转换](./conditionJudgment.md)
+* [JS中判断数据类型的方法](./judgement.md)
 * [箭头函数?](./arrowfun.md)
 * [blob与file](./blob.md)
 * [定时器](./clock.md)

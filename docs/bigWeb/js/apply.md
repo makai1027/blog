@@ -6,10 +6,10 @@ isTimeLine: true
 title: apply,call,bind的异同
 date: 2020-04-14
 tags:
- - 大前端
+ - 前端
  - JavaScript
 categories:
- - 大前端
+ - 前端
 ---
 # apply,call,bind 的异同
 

@@ -3,6 +3,7 @@
     "rules": {
       "no-console": "off",
       "@typescript-eslint/ban-ts-comment": "off",
-      "@typescript-eslint/no-namespace": "off"
+      "@typescript-eslint/no-namespace": "off",
+      // "prefer-template": "off"
     }
   }

@@ -3,7 +3,7 @@ sticky: 999
 recommend: -999
 hidden: true
 sidebar:
- title: 简介
+ title: JavaScript基础知识
 group:
  title: Javascript
 ---
@@ -17,11 +17,11 @@ group:
 * [JS中基本数据类型以及它们的区别](./baseData.md)
 * [JS == 和 === 的区别以及条件判断引发的数据类型转换](./conditionJudgment.md)
 * [JS中判断数据类型的方法](./judgement.md)
-* [箭头函数?](./arrowfun.md)
+* [浅拷贝与深拷贝](./copy.md)
+<!-- * [箭头函数?](./arrowfun.md)
 * [blob与file](./blob.md)
 * [定时器](./clock.md)
 * [闭包](./closure.md)
-* [浅拷贝与深拷贝](./copy.md)
 * [柯里化(Currying)](./currying.md)
 * [delete](./delete.md)
 * [ECMAScript规范解读this(未完待续)](./ecmathis.md)
@@ -47,4 +47,4 @@ group:
 * [节流与防抖](./throttling.md)
 * [JavaScript中的类型转换规则](./typeConvert.md)
 * [参数按值传递](./valuePass.md)
-* [变量对象](./variableObject.md)
+* [变量对象](./variableObject.md) -->

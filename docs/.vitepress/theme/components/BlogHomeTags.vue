@@ -15,6 +15,8 @@ const tags = computed(() => {
   return [...new Set(docs.value.map(v => v.meta.tag || []).flat(3))]
 })
 
+console.log(docs.value.map(v => v.meta.tag || []))
+
 // const groups = computed(() => {
 //   return [...new Set(docs.value.map(v => v.meta.group || []).flat(3))]
 // })

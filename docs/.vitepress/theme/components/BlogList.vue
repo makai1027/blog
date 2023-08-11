@@ -46,6 +46,7 @@ const filterData = computed(() => {
     v.meta?.tag?.includes(activeTagLabel.value),
   )
 })
+
 const { home } = useBlogConfig()
 const pageSize = computed(
   () => frontmatter.value.blog?.pageSize || home?.pageSize || 6,
@@ -116,9 +117,9 @@ watch(
       small
       background
       :default-current-page="1"
-      :page-size="currentPage"
+      :current-page="currentPage"
+      :page-size="pageSize"
       :total="filterData.length"
-      layout="prev, pager, next, jumper"
       @update:current-page="handleUpdatePageNum"
     />
   </ClientOnly>

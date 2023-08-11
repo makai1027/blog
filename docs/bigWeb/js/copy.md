@@ -114,6 +114,7 @@ function cloneDeep(target) {
   const result = Array.isArray(target) ? [] : {}
 
   for (const k in target) {
+    // eslint-disable-next-line no-prototype-builtins
     if (target.hasOwnProperty(k))
       result[k] = cloneDeep(target[k])
 

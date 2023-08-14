@@ -1,10 +1,11 @@
 import { defineConfig } from 'vitepress'
 import Unocss from 'unocss/vite'
 import { presetAttributify, presetIcons, presetUno } from 'unocss'
+import { withMermaid } from 'vitepress-plugin-mermaid'
 import { getAllFiles } from './theme/node'
 import type { Theme } from './theme/composables/config/index'
 
-export default defineConfig({
+export default withMermaid(defineConfig({
   ignoreDeadLinks: true,
   title: '遇见前端',
   description: '一个前端的学习笔记',
@@ -78,6 +79,11 @@ export default defineConfig({
     ],
   },
   vite: {
+    resolve: {
+      alias: {
+        mermaid: 'mermaid/dist/mermaid.esm.mjs',
+      },
+    },
     plugins: [
       Unocss({
         presets: [
@@ -95,4 +101,4 @@ export default defineConfig({
       }),
     ],
   },
-})
+}))

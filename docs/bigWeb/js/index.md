@@ -8,7 +8,7 @@ group:
  title: Javascript
 ---
 
-# 简介
+# JavaScript基础知识
 
 此部分记载学习与业务开发中所遇问题及解法和了解到的一些语言特性
 
@@ -18,6 +18,7 @@ group:
 * [JS == 和 === 的区别以及条件判断引发的数据类型转换](./conditionJudgment.md)
 * [JS中判断数据类型的方法](./judgement.md)
 * [浅拷贝与深拷贝](./copy.md)
+* [JavaScript-事件循环（EventLoop）](./eventloop.md)
 <!-- * [箭头函数?](./arrowfun.md)
 * [blob与file](./blob.md)
 * [定时器](./clock.md)
@@ -26,7 +27,6 @@ group:
 * [delete](./delete.md)
 * [ECMAScript规范解读this(未完待续)](./ecmathis.md)
 * [ES6+的一些新语法糖和方法整理](./es6+.md)
-* [Event Loop](./eventloop.md)
 * [浮点数](./float.md)
 * [垃圾回收机制](./garbage.md)
 * [获取dom元素的几种方式](./getElement.md)

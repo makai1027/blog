@@ -10,6 +10,7 @@ import BlogHomeBanner from './BlogHomeBanner.vue'
 import BlogList from './BlogList.vue'
 import BlogHomeInfo from './BlogHomeInfo.vue'
 import BlogSidebar from './BlogSidebar.vue'
+import BlogImagePreview from './BlogImagePreview.vue'
 
 const isBlogTheme = useBlogThemeMode()
 const { Layout } = Theme
@@ -27,6 +28,7 @@ const { Layout } = Theme
         <!-- 阅读时间分析 -->
         <ClientOnly>
           <BlogArticleAnalyze />
+          <BlogImagePreview />
         </ClientOnly>
       </template>
 

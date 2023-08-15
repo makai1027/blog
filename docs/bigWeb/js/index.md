@@ -19,8 +19,10 @@ group:
 * [JS中判断数据类型的方法](./judgement.md)
 * [浅拷贝与深拷贝](./copy.md)
 * [JavaScript-事件循环（EventLoop）](./eventloop.md)
-* [JS中dom操作有哪些？](./dom.md)
-<!-- * [箭头函数?](./arrowfun.md)
+* [JS中dom操作有哪些方法？](./dom.md)
+* [说说你对箭头函数的理解?](./arrowfun.md)
+* [说说你对作用域、作用域链的理解？](./scope.md)
+<!-- 
 * [blob与file](./blob.md)
 * [定时器](./clock.md)
 * [闭包](./closure.md)

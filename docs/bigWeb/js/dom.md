@@ -1,9 +1,9 @@
 ---
 sidebar:
- title: JS中dom操作有哪些？
+ title: JS中dom操作有哪些方法？
  step: 10
 isTimeLine: true
-title: JS中dom操作有哪些？
+title: JS中dom操作有哪些方法？
 date: 2020-06-14
 tags:
  - 前端
@@ -12,7 +12,7 @@ categories:
  - 前端
 ---
 
-# JS中dom操作有哪些？
+# JS中dom操作有哪些方法？
 
 ## 什么是dom元素？ 什么是节点？
 
@@ -73,6 +73,9 @@ categories:
 |window.frames|返回所有的iframe标签，返回window对象|
 |父节点.previousSibling|获取节点的前一个兄弟节点|
 |父节点.nextSibling|获取节点的后一个兄弟节点|
+|父节点.childNodes|返回父节点下的所有NodeList元素|
+|父节点.firstChild|获取节点的第一个子节点|
+|父节点.lastChild|获取节点的最后一个子节点|
 
 ## dom节点的创建
 | 方法 | 描述 | 
@@ -83,3 +86,31 @@ categories:
 |dom.cloneNode()|将dom克隆一个新的dom|
 
 
+## HTMLCollection和NodeList
+
+### 相同点
+* NodeList 和 HTMLCollection都是非数组，属于类数组或者伪数组
+* 都存在length属性
+* 都可以通过索引获取对应的元素
+* 都无法使用数组的方法，valueOf、pop、push、join
+
+### 区别
+
+* HTMLCollection是html元素的集合（仅包含元素）
+* NodeList是文档节点的集合
+* NodeList只能通过索引来获取
+* NodeList包含文本节点和属性节点
+* HTMLCollection可以通过name、id或或者索引来获取
+
+### 获取NodeLit的方法
+
+* document.getElementsByName
+* document.querySelectorAll
+* element.childNodes
+
+
+### 获取HTMLCollection的方法
+
+* document.getElementsByClassName
+* document.getElementsByTagName
+* document.forms

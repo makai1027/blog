@@ -22,6 +22,7 @@ group:
 * [JS中dom操作有哪些方法？](./dom.md)
 * [说说你对箭头函数的理解?](./arrowfun.md)
 * [说说你对作用域、作用域链的理解？](./scope.md)
+* [执行上下文和执行栈](./runStack.md)
 <!-- 
 * [blob与file](./blob.md)
 * [定时器](./clock.md)
@@ -41,7 +42,6 @@ group:
 * [文件上传下载](./p5.md)
 * [Promise](./promise.md)
 * [原型与原型链](./prototype.md)
-* [执行上下文栈](./runStack.md)
 * [执行上下文](./runcontext.md)
 * [作用域](./scope.md)
 * [作用域链](./scopeLink.md)

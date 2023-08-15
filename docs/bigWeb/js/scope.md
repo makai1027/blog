@@ -4,7 +4,7 @@ sidebar:
  step: 10
 isTimeLine: true
 title: 说说你对作用域、作用域链的理解？
-date: 2020-04-14
+date: 2020-07-14
 tags:
  - 前端
  - JavaScript
@@ -195,3 +195,8 @@ say()
 
 
 **未在当前作用域内声明的变量称为自由变量，参数name和age对于person函数来说就是自由变量**
+
+
+## 参考
+* [JavaScript深入之词法作用域和动态作用域](https://github.com/mqyqingfeng/Blog/issues/3)
+* [面试官：说说你对作用域链的理解](https://github.com/febobo/web-interview/issues/58)

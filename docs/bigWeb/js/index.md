@@ -13,16 +13,18 @@ group:
 此部分记载学习与业务开发中所遇问题及解法和了解到的一些语言特性
 
 ## 目录
-* [apply,call,bind 的异同](./apply.md)
-* [JS中基本数据类型以及它们的区别](./baseData.md)
-* [JS == 和 === 的区别以及条件判断引发的数据类型转换](./conditionJudgment.md)
-* [JS中判断数据类型的方法](./judgement.md)
-* [浅拷贝与深拷贝](./copy.md)
-* [JavaScript-事件循环（EventLoop）](./eventloop.md)
-* [JS中dom操作有哪些方法？](./dom.md)
-* [说说你对箭头函数的理解?](./arrowfun.md)
-* [说说你对作用域、作用域链的理解？](./scope.md)
-* [执行上下文和执行栈](./runStack.md)
+* [Javascript - apply,call,bind 的异同](./apply.md)
+* [Javascript - 基本数据类型以及它们的区别](./baseData.md)
+* [Javascript - == 和 === 的区别以及条件判断引发的数据类型转换](./conditionJudgment.md)
+* [Javascript - 判断数据类型的方法](./judgement.md)
+* [Javascript - 浅拷贝与深拷贝](./copy.md)
+* [JavaScript - 事件循环（EventLoop）](./eventloop.md)
+* [Javascript - dom操作有哪些方法？](./dom.md)
+* [Javascript - 说说你对箭头函数的理解?](./arrowfun.md)
+* [Javascript - 说说你对作用域、作用域链的理解？](./scope.md)
+* [Javascript - 执行上下文和执行栈](./runStack.md)
+* [Javascript - 原型和原型链](./prototype.md)
+* [Javascript - 为什么实例没有prototype属性？什么时候对象会有prototype属性呢？](./prototype2.md)
 <!-- 
 * [blob与file](./blob.md)
 * [定时器](./clock.md)

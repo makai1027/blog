@@ -2,6 +2,7 @@ import 'uno.css'
 
 // override style
 import './styles/index.scss'
+import 'gitalk/dist/gitalk.css'
 
 // element-ui
 import 'element-plus/dist/index.css'

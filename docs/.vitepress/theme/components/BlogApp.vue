@@ -2,6 +2,8 @@
 import Theme from 'vitepress/theme'
 import { ElConfigProvider } from 'element-plus'
 import zhCn from 'element-plus/es/locale/lang/zh-cn'
+import { onMounted } from 'vue'
+import Gitalk from 'gitalk'
 import { useBlogThemeMode } from '../composables/config/blog'
 import ScoredTwice from './ScoredTwice.vue'
 import BlogAlert from './BlogAlert.vue'
@@ -14,6 +16,20 @@ import BlogImagePreview from './BlogImagePreview.vue'
 
 const isBlogTheme = useBlogThemeMode()
 const { Layout } = Theme
+
+onMounted(() => {
+  const gitalk = new Gitalk({
+    clientID: '243936355361ea9d1d33',
+    clientSecret: '8201b3418abe0b04adb5eb93948dc8f04c9ed323',
+    repo: 'https://makai1027.github.io', // The repository of store comments,
+    owner: 'makai1027',
+    admin: ['makai1027'],
+    id: location.pathname, // Ensure uniqueness and length less than 50
+    distractionFreeMode: false, // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+})
 </script>
 
 <template>
@@ -59,7 +75,7 @@ const { Layout } = Theme
 
       <!-- 评论区 -->
       <template #doc-after>
-        评论区
+        <div id="gitalk-container" />
       </template>
     </Layout>
   </ElConfigProvider>

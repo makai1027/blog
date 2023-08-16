@@ -21,9 +21,10 @@ onMounted(() => {
   const gitalk = new Gitalk({
     clientID: '243936355361ea9d1d33',
     clientSecret: '8201b3418abe0b04adb5eb93948dc8f04c9ed323',
-    repo: 'https://makai1027.github.io', // The repository of store comments,
+    repo: 'blog-comments', // The repository of store comments,
     owner: 'makai1027',
     admin: ['makai1027'],
+    language: 'zh-CN',
     id: location.pathname, // Ensure uniqueness and length less than 50
     distractionFreeMode: false, // Facebook-like distraction free mode
   })

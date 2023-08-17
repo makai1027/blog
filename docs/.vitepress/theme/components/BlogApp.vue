@@ -2,8 +2,9 @@
 import Theme from 'vitepress/theme'
 import { ElConfigProvider } from 'element-plus'
 import zhCn from 'element-plus/es/locale/lang/zh-cn'
-import { onMounted } from 'vue'
+import { onMounted, ref, watch } from 'vue'
 import Gitalk from 'gitalk'
+import { useRoute } from 'vitepress'
 import { useBlogThemeMode } from '../composables/config/blog'
 import ScoredTwice from './ScoredTwice.vue'
 import BlogAlert from './BlogAlert.vue'
@@ -31,6 +32,21 @@ onMounted(() => {
 
   gitalk.render('gitalk-container')
 })
+
+const route = useRoute()
+const showComment = ref(true)
+watch(
+  () => route.path,
+  () => {
+    showComment.value = false
+    setTimeout(() => {
+      showComment.value = true
+    }, 200)
+  },
+  {
+    immediate: true,
+  },
+)
 </script>
 
 <template>
@@ -76,7 +92,7 @@ onMounted(() => {
 
       <!-- 评论区 -->
       <template #doc-after>
-        <div id="gitalk-container" />
+        <div v-if="showComment" id="gitalk-container" />
       </template>
     </Layout>
   </ElConfigProvider>

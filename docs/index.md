@@ -1,5 +1,6 @@
 ---
 layout: home
+comment: false
 # 首页部分元素定制
 blog:
  name: '遇见前端'

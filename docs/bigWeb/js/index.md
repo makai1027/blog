@@ -25,6 +25,7 @@ group:
 * [Javascript - 执行上下文和执行栈](./runStack.md)
 * [Javascript - 原型和原型链](./prototype.md)
 * [Javascript - 为什么实例没有prototype属性？什么时候对象会有prototype属性呢？](./prototype2.md)
+* [Javascript - 如何实现继承以及继承的方式有哪些？](./inherit.md)
 <!-- 
 * [blob与file](./blob.md)
 * [定时器](./clock.md)

@@ -5,6 +5,7 @@ sidebar:
 isTimeLine: true
 title: 说说你对作用域、作用域链的理解？
 date: 2020-07-14
+author: 马凯
 tags:
  - 前端
  - JavaScript

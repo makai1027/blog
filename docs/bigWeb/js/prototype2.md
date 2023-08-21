@@ -5,6 +5,7 @@ sidebar:
 isTimeLine: true
 title: javascript - 为什么实例没有prototype属性？什么时候对象会有prototype属性呢？
 date: 2020-07-12
+author: 马凯
 tags:
  - 前端
  - JavaScript

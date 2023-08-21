@@ -5,6 +5,7 @@ sidebar:
 isTimeLine: true
 title: apply,call,bind的异同
 date: 2020-04-14
+author: 马凯
 tags:
  - 前端
  - JavaScript

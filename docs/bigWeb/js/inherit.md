@@ -5,6 +5,7 @@ sidebar:
 isTimeLine: true
 title: 如何实现继承以及继承的方式有哪些？
 date: 2020-08-11
+author: 马凯
 tags:
  - 前端
  - JavaScript

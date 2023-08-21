@@ -5,6 +5,7 @@ sidebar:
 isTimeLine: true
 title: JS中原型和原型链
 date: 2020-07-11
+author: 马凯
 tags:
  - 前端
  - JavaScript

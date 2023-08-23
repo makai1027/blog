@@ -26,6 +26,7 @@ group:
 * [Javascript - 原型和原型链](./prototype.md)
 * [Javascript - 为什么实例没有prototype属性？什么时候对象会有prototype属性呢？](./prototype2.md)
 * [Javascript - 如何实现继承以及继承的方式有哪些？](./inherit.md)
+* [Javascript - js实例声明new具体做了什么？](./new.md)
 <!-- 
 * [blob与file](./blob.md)
 * [定时器](./clock.md)

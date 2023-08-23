@@ -112,6 +112,14 @@ flowchart TD
 
 ## 手写模拟new
 
+:::tip
+注意：在构造函数没有返回值的情况下，直接返回创建的新对象；<br/>
+我们先假定 构造函数通过借用构造函数更改作用域指向后的执行结果为result;<br/>
+如果构造函数有返回，这个时候需要判断返回值的数据类型；<br/>
+如果返回值result为基础数据类型string、number、null、undefined、boolean、symbol，那么返回新对象；<br/>
+如果返回值为引用数据类型时，则返回result
+:::
+
 ```ts
 function _new(constructor) {
   const args = [].slice.call(arguments[0])

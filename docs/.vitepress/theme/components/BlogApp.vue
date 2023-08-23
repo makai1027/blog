@@ -69,11 +69,11 @@ watch(
           <div class="py-60px">
             <BlogHomeBanner />
           </div>
-          <div class="content-wrapper flex">
+          <div class="content-wrapper flex <md:flex-wrap">
             <div class="blog-list-wrapper flex-1">
               <BlogList />
             </div>
-            <div class="blog-info-wrapper w-260px ml-20px">
+            <div class="blog-info-wrapper w-260px ml-20px <md:w-full <md:ml-0 <md:mt-20px">
               <BlogHomeInfo />
             </div>
           </div>

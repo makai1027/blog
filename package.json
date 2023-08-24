@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "dev": "vitepress dev docs",
-    "build": "vitepress build docs",
+    "build": "vitepress build docs && node deploy.js",
     "preview": "vitepress preview docs"
   },
   "keywords": [],
@@ -19,7 +19,9 @@
     "gray-matter": "^4.0.3",
     "highlight.js": "^11.8.0",
     "mermaid": "^10.3.0",
+    "path": "^0.12.7",
     "sass": "^1.64.1",
+    "shelljs": "^0.8.5",
     "typescript": "^5.1.6",
     "unocss": "^0.54.1",
     "vite-plugin-vue-setup-extend": "^0.4.0",

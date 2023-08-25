@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import { ElAvatar, ElButton, ElDivider } from 'element-plus'
 import { isCurrentWeek } from '../utils'
 import { useArticles } from '../composables/config/blog'
@@ -9,14 +9,7 @@ const docs = useArticles()
 const notHiddenArticles = computed(() => {
   return docs.value.filter(v => !v.meta.hidden)
 })
-const blogUrl = computed(() => {
-  const host = window.location.host
-  if (host === 'http://www.soulferry.xyz/')
-    return 'https://makai1027.github.io/'
-
-  else
-    return 'http://www.soulferry.xyz/'
-})
+const blogUrl = ref('')
 const nowMonth = new Date().getMonth()
 const nowYear = new Date().getFullYear()
 const currentMonth = computed(() => {
@@ -36,6 +29,15 @@ const currentWeek = computed(() => {
 function openGithub() {
   window.open('https://github.com/makai1027')
 }
+
+onMounted(() => {
+  const host = window.location.host
+  if (host === 'http://www.soulferry.xyz/')
+    blogUrl.value = 'https://makai1027.github.io/'
+
+  else
+    blogUrl.value = 'http://www.soulferry.xyz/'
+})
 </script>
 
 <template>

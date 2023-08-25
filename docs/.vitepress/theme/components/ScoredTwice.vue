@@ -6,6 +6,10 @@ import { initCanvas, polar2cart, r15, r180, r90 } from '../utils'
 const cvsRef = ref<HTMLCanvasElement | null>(null)
 const { random } = Math
 
+const f = {
+  start: () => {},
+}
+
 const init = ref(6)
 const len = ref(6)
 const stopped = ref(false)
@@ -58,7 +62,7 @@ onMounted(async () => {
 
   const controls = useRafFn(frame, { immediate: false })
   const _r = () => random() * 0.6 + 0.2
-  const start = () => {
+  f.start = () => {
     controls.pause()
     ctx.clearRect(0, 0, width, height)
     ctx.lineWidth = 1
@@ -74,7 +78,7 @@ onMounted(async () => {
     stopped.value = false
   }
 
-  start()
+  f.start()
 })
 </script>
 

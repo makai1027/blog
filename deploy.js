@@ -1,5 +1,6 @@
 import shell from 'shelljs'
 
+shell.echo('=========开始提交===========')
 shell.cd('/Users/makai/Documents/project/私人项目/makai.github.io')
 
 shell.ls().forEach((file) => {
@@ -21,3 +22,5 @@ git push
   shell.echo('Error: Git commit failed')
   shell.exit(1)
 }
+
+shell.echo('=========提交完成===========')

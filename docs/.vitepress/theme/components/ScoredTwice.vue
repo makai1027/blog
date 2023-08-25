@@ -1,20 +1,14 @@
 <script lang='ts' setup name="Plum">
 import { useRafFn } from '@vueuse/core'
-import { onMounted, ref, watch } from 'vue'
+import { onMounted, ref } from 'vue'
 import { initCanvas, polar2cart, r15, r180, r90 } from '../utils'
 
 const cvsRef = ref<HTMLCanvasElement | null>(null)
 const { random } = Math
 
-const f = {
-  start: () => {},
-}
-
-const init = ref(5)
+const init = ref(6)
 const len = ref(6)
 const stopped = ref(false)
-
-watch([init, len], () => f.start())
 
 onMounted(async () => {
   const canvas = cvsRef.value!
@@ -39,27 +33,32 @@ onMounted(async () => {
     if (nx < -100 || nx > width + 100 || ny < -100 || ny > height + 100)
       return
 
-    const _w = iterations <= init.value ? 0.8 : 0.5
-    if (random() < _w) {
+    if (iterations <= init.value || random() < 0.5) {
       steps.push(() => step(nx, ny, rad1, iterations))
       steps.push(() => step(nx, ny, rad2, iterations))
     }
   }
 
-  const frame = () => {
-    prevSteps = steps
-    steps = []
+  let T = performance.now()
+  const D = 25
 
-    if (!prevSteps.length) {
-      controls.pause()
-      stopped.value = true
+  const frame = () => {
+    if (performance.now() - T > D) {
+      prevSteps = steps
+      steps = []
+      T = performance.now()
+
+      if (!prevSteps.length) {
+        controls.pause()
+        stopped.value = true
+      }
+      prevSteps.forEach(i => random() < 0.5 ? steps.push(i) : i())
     }
-    prevSteps.forEach(i => i())
   }
 
   const controls = useRafFn(frame, { immediate: false })
   const _r = () => random() * 0.6 + 0.2
-  f.start = () => {
+  const start = () => {
     controls.pause()
     ctx.clearRect(0, 0, width, height)
     ctx.lineWidth = 1
@@ -75,7 +74,7 @@ onMounted(async () => {
     stopped.value = false
   }
 
-  f.start()
+  start()
 })
 </script>
 

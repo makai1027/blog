@@ -28,6 +28,7 @@ group:
 * [Javascript - 如何实现继承以及继承的方式有哪些？](./inherit.md)
 * [Javascript - js实例声明new具体做了什么？](./new.md)
 * [Javascript - BOM是什么？常见的BOM对象有哪些？](./bom.md)
+* [Javascript - 本地存储方法有哪些？他们的区别是什么？](./storage.md)
 <!-- 
 * [blob与file](./blob.md)
 * [定时器](./clock.md)
@@ -46,10 +47,6 @@ group:
 * [判断数据类型的方案](./p4.md)
 * [文件上传下载](./p5.md)
 * [Promise](./promise.md)
-* [原型与原型链](./prototype.md)
-* [执行上下文](./runcontext.md)
-* [作用域](./scope.md)
-* [作用域链](./scopeLink.md)
 * [Symbol 的用法](./symbol.md)
 * [节流与防抖](./throttling.md)
 * [JavaScript中的类型转换规则](./typeConvert.md)

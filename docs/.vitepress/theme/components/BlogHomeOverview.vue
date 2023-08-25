@@ -9,6 +9,14 @@ const docs = useArticles()
 const notHiddenArticles = computed(() => {
   return docs.value.filter(v => !v.meta.hidden)
 })
+const blogUrl = computed(() => {
+  const host = window.location.host
+  if (host === 'http://www.soulferry.xyz/')
+    return 'https://makai1027.github.io/'
+
+  else
+    return 'http://www.soulferry.xyz/'
+})
 const nowMonth = new Date().getMonth()
 const nowYear = new Date().getFullYear()
 const currentMonth = computed(() => {
@@ -42,9 +50,13 @@ function openGithub() {
         <span class="i-line-md:email primary" />
         <a class="ml-2" href="mailto:403756835@qq.com">403756835@qq.com</a>
       </p>
-      <p class="text-sm">
+      <p class="text-sm mb-2">
         <span class="i-ic:round-wechat success" />
         <span class="ml-2">atob('U3ltYm9sOTFt')</span>
+      </p>
+      <p class="text-sm mb-2">
+        <span class="i-line-md:home-md primary" />
+        <a class="ml-2" :href="blogUrl">---博客地址---</a>
       </p>
     </div>
     <div class="w-full flex items-center ">

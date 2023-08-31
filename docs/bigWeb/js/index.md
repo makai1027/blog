@@ -31,6 +31,8 @@ group:
 * [Javascript - 本地存储方法有哪些？他们的区别是什么？](./storage.md)
 * [Javascript - 前端的请求方法有些？他们的区别是什么？](./fetch.md)
 * [Javascript - 什么是节流和防抖？他们的区别是什么？如何实现？](./debounce.md)
+* [Javascript - js常见的设计模式有哪些？使用场景是什么？](./design.md)
+* [Javascript - js有哪些声明方式？他们的区别是什么？](./var.md)
 <!-- 
 * [blob与file](./blob.md)
 * [定时器](./clock.md)

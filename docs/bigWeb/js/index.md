@@ -30,6 +30,7 @@ group:
 * [Javascript - BOM是什么？常见的BOM对象有哪些？](./bom.md)
 * [Javascript - 本地存储方法有哪些？他们的区别是什么？](./storage.md)
 * [Javascript - 前端的请求方法有些？他们的区别是什么？](./fetch.md)
+* [Javascript - 什么是节流和防抖？他们的区别是什么？如何实现？](./debounce.md)
 <!-- 
 * [blob与file](./blob.md)
 * [定时器](./clock.md)

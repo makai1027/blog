@@ -32,7 +32,7 @@ function openGithub() {
 
 onMounted(() => {
   const host = window.location.host
-  if (host === 'http://www.soulferry.xyz/')
+  if (host === 'www.soulferry.xyz')
     blogUrl.value = 'https://makai1027.github.io/'
 
   else

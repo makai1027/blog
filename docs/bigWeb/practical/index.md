@@ -20,3 +20,4 @@ group:
 * [Javascript - 排序方法有哪些？](./sort.md)
 * [Javascript - 二叉树的遍历方式有哪些？](./binaryTree.md)
 * [Javascript - 二叉树路径、计算最大和最小值](./binaryTree2.md)
+* [Javascript - 异步并控制发器](./asyncFetch.md)

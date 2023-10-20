@@ -93,5 +93,7 @@ console.log(Proxy.__proto__) // 指向内置匿名函数anonymous， function（
 > 只有创建函数的时候才会创建一个prototype属性，目的就是为了完成上面的继承方式。
 
 
+* 3. proxy是一个用于构造动态代理对象，一个动态代理对象的所有属性都来自target对象或者Handler的处理结果，因此动态代理对象不需要原型，故而构造器也不需要原型对象prototype属性来提供原型。
+
 ## 参考
 * [ javascript - 为什么实例没有prototype属性？什么时候对象会有prototype属性呢？](https://www.php.cn/wenda/28026.html)

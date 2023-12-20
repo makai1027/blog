@@ -76,10 +76,10 @@ export default withMermaid(defineConfig({
           { text: '问题总结', link: '/interview/summary/index' },
         ],
       },
-      // {
-      //   text: '技术随笔',
-      //   link: '/other/index',
-      // },
+      {
+        text: '个人项目',
+        link: '/project/index',
+      },
       {
         text: '推荐',
         items: [{

@@ -30,7 +30,7 @@
     "baseUrl": "./",                                  /* Specify the base directory to resolve non-relative module names. */
     // "paths": {},                                      /* Specify a set of entries that re-map imports to additional lookup locations. */
     // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
-    "types": [],
+    "types": ["node"],
     "typeRoots": ["./node_modules/@types/", "./docs/types", "element-plus/global"],
     // "allowUmdGlobalAccess": true,                     /* Allow accessing UMD globals from modules. */
     "resolveJsonModule": true,                        /* Enable importing .json files */

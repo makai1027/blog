@@ -47,3 +47,10 @@ categories:
   css/cube3D-2.vue
 :::
 
+
+## 示例-3
+:::demo
+  css/cube3D-3.vue
+:::
+
+> 这个动画我写不好

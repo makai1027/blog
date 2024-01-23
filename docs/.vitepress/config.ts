@@ -4,6 +4,7 @@ import { presetAttributify, presetIcons, presetUno } from 'unocss'
 import { withMermaid } from 'vitepress-plugin-mermaid'
 import { getAllFiles } from './theme/node'
 import type { Theme } from './theme/composables/config/index'
+import mdPlugin from './plugins'
 
 export default withMermaid(defineConfig({
   ignoreDeadLinks: true,
@@ -114,5 +115,10 @@ export default withMermaid(defineConfig({
         ],
       }),
     ],
+  },
+  markdown: {
+    config: (md) => {
+      md.use(mdPlugin)
+    },
   },
 }))

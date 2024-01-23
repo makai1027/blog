@@ -33,6 +33,7 @@ group:
 * [Javascript - 什么是节流和防抖？他们的区别是什么？如何实现？](./debounce.md)
 * [Javascript - js常见的设计模式有哪些？使用场景是什么？](./design.md)
 * [Javascript - js有哪些声明方式？他们的区别是什么？](./var.md)
+* [Javascript - 如何给fetch添加超时功能？](./fetch-1.md)
 <!-- 
 * [blob与file](./blob.md)
 * [定时器](./clock.md)

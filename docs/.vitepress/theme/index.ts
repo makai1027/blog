@@ -15,7 +15,7 @@ import BlogDemoPreview from './components/BlogDemoPreview.vue'
 import { withConfigProvider } from './composables/config/blog'
 
 // @ts-expect-error
-const modules = import.meta.glob('../examples/**/*.vue')
+const modules = import.meta.glob('../../examples/**/*.vue')
 
 export const BlogTheme: Theme = {
   ...DefaultTheme,

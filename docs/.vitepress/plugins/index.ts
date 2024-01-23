@@ -22,7 +22,7 @@ export default (md: any) => {
       matchRes.forEach((demoStr) => {
         const fileUrl = demoStr.match(/^:::demo((.|\n)*):::$/m)[1]?.replace(/\s/g, '')
         if (fileUrl) {
-          const source = fs.readFileSync(path.resolve('./docs/.vitepress', 'examples', `${fileUrl}`), 'utf-8')
+          const source = fs.readFileSync(path.resolve('./docs/', 'examples', `${fileUrl}`), 'utf-8')
 
           const htmlSource = codeToHtml(source, { lang: 'vue' })
           const _newDemoStr = `<BlogDemoPreview source="${encodeURIComponent(

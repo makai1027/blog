@@ -1,5 +1,5 @@
 <script lang='ts' setup>
-import { getCurrentInstance, onMounted, ref } from 'vue'
+import { getCurrentInstance, onMounted, ref, shallowRef } from 'vue'
 import { useClipboard, useToggle } from '@vueuse/core'
 import { ElCollapseTransition, ElDivider, ElIcon, ElMessage, ElTooltip } from 'element-plus'
 import Example from './demo/vp-example.vue'
@@ -17,8 +17,8 @@ const props = withDefaults(defineProps<{
 const vm = getCurrentInstance()
 const modules = vm?.appContext.app.config.globalProperties.modules
 const sourceCodeRef = ref<HTMLButtonElement>()
-const formatPathDemos = ref()
-console.log(formatPathDemos.value)
+const formatPathDemos = shallowRef()
+
 const { copy, isSupported } = useClipboard({
   source: decodeURIComponent(props.rawSource),
   read: false,
@@ -59,7 +59,7 @@ onMounted(async () => {
 <template>
   <div class="custom-wrapper">
     <div class="example">
-      <Example :file="path" :demo="formatPathDemos" v-bind="$attrs" />
+      <Example v-if="formatPathDemos" :file="path" :demo="formatPathDemos" v-bind="$attrs" />
 
       <ElDivider class="!m-0" />
 

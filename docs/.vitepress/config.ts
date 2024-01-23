@@ -69,6 +69,7 @@ export default withMermaid(defineConfig({
         items: [
           { text: 'JavaScript基础', link: '/bigWeb/js/index' },
           { text: 'JS各类型手写题', link: '/bigWeb/practical/index' },
+          { text: '前端日常小demo', link: '/bigWeb/demo/index' },
         ],
       },
       {

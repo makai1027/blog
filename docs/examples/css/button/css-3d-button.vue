@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="custom-wrapper w-full p-100 bg-#151515">
+  <div class="custom-wrapper w-full p-50px bg-#151515">
     <div class="middle">
       <button
         class="position-relative mx-auto mb-20px px-32px py-10px bg-white display-block border-none rounded-6px uppercase font-mono tracking-0.5em font-500 text-lg w-200px mix-blend-color-dodge perspect-500 preserve-3d"
@@ -26,8 +26,6 @@
 
 <style lang='scss' scoped>
 .custom-wrapper {
-    width: 100%;
-    padding: 100px;
     .middle {
         transform: rotatex(10deg);
         animation: rotateAngle 6s linear infinite;

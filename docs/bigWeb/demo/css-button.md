@@ -1,9 +1,9 @@
 ---
 sidebar:
- title: css 3d 按钮交互效果
+ title: css 按钮交互效果
  step: 10
 isTimeLine: true
-title: css 3d 按钮交互效果
+title: css 按钮交互效果
 date: 2024-01-24 10:00:00
 author: 马凯
 tags:
@@ -14,11 +14,11 @@ categories:
  - 前端
 ---
 
-# css 3d 按钮交互效果
+# css 按钮交互效果
 
 ## 示例 - 1
 
-> 主要是利用 css 新特效  
+> 主要是利用 css 新特效
 1. [mix-blend-mode](https://developer.mozilla.org/zh-CN/docs/Web/CSS/mix-blend-mode)
 2. [perspective](https://developer.mozilla.org/zh-CN/docs/Web/CSS/perspective)
 3. [animation](https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation)
@@ -29,3 +29,9 @@ categories:
 css/button/css-3d-button.vue
 :::
 
+## 示例 - 2
+> 通过css 新属性实现按钮的动画效果
+
+:::demo
+css/button/css-buttons.vue
+:::

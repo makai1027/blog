@@ -64,23 +64,54 @@ import { ElCol, ElRow } from 'element-plus'
         </button>
       </ElCol>
       <ElCol :lg="8" :xl="6" class="mb-30px">
-        <button class="display-block w-full tracking-0.5em text-lg leading-36px h-40px font-bold bg-#409eff text-white rounded-4px relative overflow-hidden">
-          按钮
+        <div class="relative text-lg button-9 group">
+          <button class="display-block w-full tracking-0.5em text-lg leading-36px border-2 border-solid border-#409eff h-40px font-bold text-white rounded-4px relative overflow-hidden z-3 bg-#151515">
+            <div class="relative z-2">
+              按钮
+            </div>
+            <div class="absolute left-0 top-100% w-150% pt-150% bg-#409eff transition-all duration-300 origin-top-left group-hover:-rotate-90 ease" />
+          </button>
+          <div class="button-shadow display-block transition-all duration-200 ease-linear w-full h-40px absolute left-4px top-4px bg-#409eff rounded-4px group-hover:top-0 group-hover:left-0" />
+        </div>
+      </ElCol>
+      <ElCol :lg="8" :xl="6" class="mb-30px">
+        <button class="display-block w-80% mx-auto tracking-0.5em text-lg leading-36px h-40px font-bold text-white relative group">
+          <div class="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform -skew-x-15 bg-blue-500 group-hover:bg-blue  group-hover:skew-x-15" />
+          <div class="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform skew-x-15 bg-blue group-hover:bg-blue-500  group-hover:-skew-x-12" />
+          <span class="relative">按钮</span>
         </button>
       </ElCol>
       <ElCol :lg="8" :xl="6" class="mb-30px">
-        <button class="display-block w-full tracking-0.5em text-lg leading-36px h-40px font-bold bg-#409eff text-white rounded-4px relative overflow-hidden">
-          按钮
+        <button class="display-block w-full tracking-0.5em text-lg leading-36px h-40px font-bold border-2 border-solid border-#409eff text-white rounded-4px relative overflow-hidden group">
+          <div class="absolute left-0 block w-full h-0 transition-all bg-#409eff opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease" />
+          <span class="relative">
+            按钮
+          </span>
         </button>
       </ElCol>
       <ElCol :lg="8" :xl="6" class="mb-30px">
-        <button class="display-block w-full tracking-0.5em text-lg leading-36px h-40px font-bold bg-#409eff text-white rounded-4px relative overflow-hidden">
-          按钮
+        <button class="display-block w-full tracking-0.5em text-lg leading-36px h-40px text-gray-600 bg-white font-bold bg-transparent rounded-4px relative overflow-hidden shadow-inner group">
+          <div class="absolute top-0 left--8px w-0 h-0 transition-all duration-200 border-t-2 border-solid border-#409eff group-hover:w-full group-hover:left-0 ease" />
+          <div class="absolute bottom-0 right--8px w-0 h-0 transition-all duration-200 border-b-2 border-solid border-#409eff group-hover:w-full group-hover:right-0 ease" />
+          <div class="absolute top-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-#409eff group-hover:h-full ease" />
+          <div class="absolute bottom-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-#409eff group-hover:h-full ease" />
+          <div class="absolute inset-0 w-full h-full duration-300 delay-300 bg-#409eff opacity-0 group-hover:opacity-100" />
+          <div class="relative transition-colors duration-300 delay-200 group-hover:text-white ease">
+            按钮
+          </div>
         </button>
       </ElCol>
+
       <ElCol :lg="8" :xl="6" class="mb-30px">
-        <button class="display-block w-full tracking-0.5em text-lg leading-36px h-40px font-bold bg-#409eff text-white rounded-4px relative overflow-hidden">
-          按钮
+        <button class="relative inline-flex items-center justify-center w-full leading-36px h-40px overflow-hidden font-bold text-pink hover:text-white rounded-md shadow-2xl group">
+          <span class="absolute inset-0 w-full h-full transition duration-300 ease-out opacity-0 bg-gradient-to-br from-pink-600 via-purple-700 to-blue-400 group-hover:opacity-100" />
+          <span class="absolute top-0 left-0 w-full bg-gradient-to-b from-white to-transparent opacity-5 h-1/3" />
+          <span class="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-white to-transparent opacity-5" />
+          <span class="absolute bottom-0 left-0 w-4 h-full bg-gradient-to-r from-white to-transparent opacity-5" />
+          <span class="absolute bottom-0 right-0 w-4 h-full bg-gradient-to-l from-white to-transparent opacity-5" />
+          <span class="absolute inset-0 w-full h-full border border-white rounded-md opacity-10" />
+          <span class="absolute w-0 h-0 transition-all duration-300 ease-out bg-white rounded-full group-hover:w-56 group-hover:h-56 opacity-5" />
+          <span class="relative">按钮</span>
         </button>
       </ElCol>
     </ElRow>
@@ -276,7 +307,6 @@ import { ElCol, ElRow } from 'element-plus'
     }
     .button-6 {
         border: 2px solid #409eff;
-        color: black;
         position: relative;
         overflow: hidden;
         &::after {

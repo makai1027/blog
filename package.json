@@ -37,6 +37,7 @@
     "@vueuse/core": "^10.3.0",
     "element-plus": "^2.3.8",
     "gitalk": "^1.8.0",
+    "gsap": "^3.12.5",
     "vitepress-plugin-tabs": "^0.3.0",
     "vue": "^3.3.4",
     "vue-command-palette": "^0.1.4"

@@ -31,6 +31,7 @@ export default withMermaid(defineConfig({
       'link',
       { rel: 'apple-touch-icon', href: '/favicon.ico', sizes: '180x180' },
     ],
+    ['script', { async: 'true', src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7422076189069687', crossorigin: 'anonymous' }],
   ],
   lastUpdated: true,
   themeConfig: {

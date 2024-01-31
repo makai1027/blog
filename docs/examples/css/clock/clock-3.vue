@@ -7,7 +7,7 @@ import { ElRadioButton, ElRadioGroup } from 'element-plus'
 const hour = ref(0)
 const minute = ref(0)
 const second = ref(0)
-const toggleHidden = ref('hidden')
+const toggleHidden = ref('unset')
 
 function calculTime() {
   const date = new Date()

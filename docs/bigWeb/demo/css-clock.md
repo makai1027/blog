@@ -47,6 +47,9 @@ css/clock/clock-3.vue
 
 ## css 3D 翻页卡片数字时钟
 
+:::tip
+该方案主要利用阴影、动画、css3d rotateX
+:::
 
 :::demo
 css/clock/clock-4.vue

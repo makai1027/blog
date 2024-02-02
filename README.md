@@ -1,3 +1,8 @@
+---
+hidden: true
+---
+
+
 # vitepress + vue3 + element-plus组合实现个人博客
 
 ## 功能列表

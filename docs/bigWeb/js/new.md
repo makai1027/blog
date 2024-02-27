@@ -92,7 +92,7 @@ console.log(testB) // Boo { name: '你好Boo' }
 console.log(testB.name) // 你好Boo
 ```
 
-通过返回结果可知，如果说构造函数本省有返回，如果返回的结果是object，那么实例化后则直接返回object；
+通过返回结果可知，如果说构造函数本身有返回，如果返回的结果是object，那么实例化后则直接返回object；
 如果构造函数默认返回的是基础数据类型或者不返回，则返回构造函数原型对象；
 
 所以，new过程解析中的第三步也就是借用构造函数返回时，需要对借用构造函数的返回结果进行判断，是返回**借用构造函数的返回结果**，还是直接返回**新对象**。
@@ -122,7 +122,7 @@ flowchart TD
 
 ```ts
 function _new(constructor) {
-  const args = [].slice.call(arguments[0])
+  const args = [].slice.call(arguments, 1)
   // 定义新对象
   const obj = {}
   // 添加新对象的__proto__指向构造函数constructor的prototype
@@ -152,6 +152,6 @@ console.log(child) // Person { hobbys: ['足球'] }
 console.log(child.__proto__) // { say: function(){}, constructor:  }
 console.log(child.__proto__ === Person.prototype) // true
 child.say() // ['足球']
-
+console.log(child instanceof Person) // true
 console.log(typeof child) // object
 ```

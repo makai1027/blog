@@ -7,12 +7,14 @@ const darkMode = ref(isDark.value)
 watch(
   () => darkMode.value,
   () => {
+    console.log('change-------mode')
     toggleDark()
   },
 )
 
 let resolveFn: (value: boolean | PromiseLike<boolean>) => void
 function switchTheme(event: MouseEvent) {
+  console.log('change-------start')
   const isAppearanceTransition
     // @ts-expect-error
     = document.startViewTransition
@@ -33,6 +35,7 @@ function switchTheme(event: MouseEvent) {
     await nextTick()
   })
   transition.ready.then(() => {
+    console.log('change-------transition')
     const clipPath = [
       `circle(0px at ${x}px ${y}px)`,
       `circle(${endRadius}px at ${x}px ${y}px)`,

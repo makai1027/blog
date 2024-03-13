@@ -20,3 +20,4 @@ sidebar:
 * [什么是SEO？SEO使用场景以及优化方案有哪些？](./seo.md)
 * [webpack/vite构建优化、热更新原理](./webpack&vite.md)
 * [Promise/generator/async&await的区别以及优缺点，Promise能否取消？](./promise.md)
+* [前端首屏加载优化方案有哪些？](./performance.md)

@@ -77,7 +77,7 @@ async function changeSlogan() {
     </h1>
     <div class="inspiring-wrapper">
       <h2 v-show="!!inspiring" @click="changeSlogan">
-        {{ inspiring }}
+        <span v-for="(k, i) in inspiring" :key="k" :style="{ animation: `fade-in 0.5s ${0.05 * i}s ease both`, opacity: 0 }">{{ k }}</span>
       </h2>
     </div>
   </div>
@@ -127,7 +127,6 @@ h1 {
   height: 24px;
   width: auto;
   h2 {
-    animation: fade-in 0.5s ease-in-out;
     cursor: pointer;
     text-align: center;
     font-size: 20px;

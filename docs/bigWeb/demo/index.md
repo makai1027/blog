@@ -21,6 +21,7 @@ group:
 
 ### 视觉效果
   * [css 利用filter（滤镜）&SVG动效实现会动的鸿蒙Logo](./ripples.md)
+  * [css 利用filter实现极光效果](./css-filter-aurora.md)
 
 ### 项目常用
   * [聚焦式切换主题模式-light/dark](./project-theme-toggle.md)
